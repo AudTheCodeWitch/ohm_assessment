@@ -255,3 +255,7 @@ class User(db.Model):
     def find_by_attribute(cls, rel_lookup, attribute):
         return User.query.join(RelUser).filter_by(rel_lookup=rel_lookup, attribute=attribute).first()
 
+    @classmethod
+    def get_five_newest_users(cls):
+        newest = db.session.execute("SELECT display_name, tier, point_balance FROM user ORDER BY create_time DESC LIMIT 5;")
+        return newest
