@@ -108,7 +108,7 @@
                         <tr>
                             <td>{{ user.display_name }}</td>
                             <td>{{ user.tier }}</td>
-                            <td>{{ user.point_balance }}</td>
+                            <td>{{ user.point_balance.__trunc__() }}</td>
                         </tr>
                         {% endfor %}
                     </table>
