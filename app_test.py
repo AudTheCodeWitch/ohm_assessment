@@ -10,4 +10,4 @@ from app_main import app
 
 if __name__ == '__main__':
     app.logger.setLevel(logging.DEBUG)
-    app.run(host='0.0.0.0', port=6543, static_files={'': 'public'}, debug=True)
+    app.run(host='127.0.0.1', port=6543, static_files={'': 'public'}, debug=True)
