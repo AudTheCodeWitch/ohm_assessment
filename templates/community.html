@@ -85,6 +85,19 @@
             <div class="col-md-8">
                 <div class="twothirds_div">
                     <h1>Community</h1>
+                    <table id="new-users">
+                        <th>Display Name</th>
+                        <th>Tier</th>
+                        <th>Point Balance</th>
+                        {% for user in table_data %}
+                        <tr>
+                            <td>{{ user.display_name }}</td>
+                            <td>{{ user.tier }}</td>
+                            <td>{{ user.point_balance }}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+
                 </div>
             </div>
         </div>
