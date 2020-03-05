@@ -39,6 +39,7 @@ def community():
             'gift_card_eligible': True,
             'cashout_ok': True,
             'user_below_silver': current_user.is_below_tier('Silver'),
+            'table_data': newest_users
     }
     return render_template("community.html", **args)
 
